@@ -30,7 +30,7 @@ namespace evaluación_fundamentos_ds
             for (int i = 0; i < codigos.Length; i++) 
             {
                 double monto = datos[i, 0] * datos[i, 1];
-                Console.WriteLine("{i + 1}.Código: {codigos[i]}, Provedor: {provedores[i]},Montoneto: ${monto[i]: N2}");
+                Console.WriteLine($"{i + 1}.Código: {codigos[i]}, Provedor: {provedores[i]},Montoneto: $ {monto:N2}");
                 return;
             }
             Console.WriteLine("Error: Código no encontrado :");
@@ -41,12 +41,12 @@ namespace evaluación_fundamentos_ds
             string[] provedores = {"TechCorp", "LogiExpress", "InsumoGlobal", "TechCorp2", "AlfaSUministros", "Servidores"};
             double[,] datos =
             {
-                {150.0,10 },
-                {450.0,2 },
-                {80.050,50},
-                {1200.0,1 },
-                {25.0,100},
-                {600.0,3},
+                {150.0, 10 },
+                {450.0, 2 },
+                {80.050, 50},
+                {1200.0, 1 },
+                {25.0, 100},
+                {600.0, 3},
 
             };
             Console.WriteLine("====================================");
@@ -94,7 +94,7 @@ namespace evaluación_fundamentos_ds
             Console.WriteLine("\n--Reporte ordenado por monto neto--");
             for (int i = 0; i < n; i++)
             {
-                Console.WriteLine($"Código: {codigos[i]}, Provedor: {provedores[i]}, Montoneto: ${montos:N2}");
+                Console.WriteLine($"{i + 1}Código: {codigos[i]}, Provedor: {provedores[i]}, Montoneto: ${montos[i]:N2}");
             }
             Console.WriteLine("\nMetricas:");
             Console.WriteLine($"Gran total de compras: ${granTotal:N2}");
